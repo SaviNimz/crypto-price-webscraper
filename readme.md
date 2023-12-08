@@ -46,24 +46,24 @@ The application is built using Python and utilizes the following libraries: NOTE
 
 ## Features
 
-Real-time data: The application fetches live data from CentralCharts.
-Data visualization: Interactive bar charts and pie charts provide insights into cryptocurrency prices and volumes.
-User-friendly interface: Streamlit allows for easy filtering and exploration of cryptocurrency data.
+- **Real-time data:** The application fetches live data from CentralCharts.
+- **Data visualization:** Interactive bar charts and pie charts provide insights into cryptocurrency prices and volumes.
+- **User-friendly interface:** Streamlit allows for easy filtering and exploration of cryptocurrency data.
 
-## dependencies
+## Dependencies
 
-requests
-beautifulsoup4
-streamlit
-pandas
-plotly
+- requests
+- beautifulsoup4
+- streamlit
+- pandas
+- plotly
 
-## usage
+## Usage
 
 Upon running the application, you will see a header indicating "Crypto Prices" and the last fetch time.
-An image of a cryptocurrency is displayed (crypto.png).
-The main table shows information about various cryptocurrencies.
-Use the dropdown menu to select a specific cryptocurrency and view detailed information.
-A bar chart displays the top 10 priced cryptocurrencies.
+- An image of a cryptocurrency is displayed (crypto.png).
+- The main table shows information about various cryptocurrencies.
+- Use the dropdown menu to select a specific cryptocurrency and view detailed information.
+- A bar chart displays the top 10 priced cryptocurrencies.
 
 You can add more charts and add more functionalities by your preferance
