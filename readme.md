@@ -1,6 +1,10 @@
 # Crypto Price Dashboard
 
-This is a Streamlit web application that provides real-time information about various cryptocurrencies. The application scrapes data from [CentralCharts](https://www.centralcharts.com/en/price-list-ranking/), a website that ranks cryptocurrencies based on different metrics.Note that this only scrapes crypto prices but you can change the code to fetch any type of data for your preference
+This is a Streamlit web application that provides real-time information about various cryptocurrencies. The application scrapes data from [CentralCharts](https://www.centralcharts.com/), a website that ranks cryptocurrencies based on different metrics.Note that this only scrapes crypto prices but you can change the code to fetch any type of data for your preference
+
+![webpage](pg2.jpeg)
+
+![webpage](pg1.jpeg)
 
 ## Table of Contents
 
@@ -9,8 +13,8 @@ This is a Streamlit web application that provides real-time information about va
 - [Features](#features)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
+
 
 ## Introduction
 
@@ -32,10 +36,12 @@ The application is built using Python and utilizes the following libraries: NOTE
 
 2. Install the required dependencies:
 
+    ```bash
     pip install -r requirements.txt
 
 3. Run the Streamlit app:
 
+    ```bash
     streamlit run scraper.py
 
 ## Features
@@ -43,3 +49,21 @@ The application is built using Python and utilizes the following libraries: NOTE
 Real-time data: The application fetches live data from CentralCharts.
 Data visualization: Interactive bar charts and pie charts provide insights into cryptocurrency prices and volumes.
 User-friendly interface: Streamlit allows for easy filtering and exploration of cryptocurrency data.
+
+## dependencies
+
+requests
+beautifulsoup4
+streamlit
+pandas
+plotly
+
+## usage
+
+Upon running the application, you will see a header indicating "Crypto Prices" and the last fetch time.
+An image of a cryptocurrency is displayed (crypto.png).
+The main table shows information about various cryptocurrencies.
+Use the dropdown menu to select a specific cryptocurrency and view detailed information.
+A bar chart displays the top 10 priced cryptocurrencies.
+
+You can add more charts and add more functionalities by your preferance
