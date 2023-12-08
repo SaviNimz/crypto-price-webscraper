@@ -14,7 +14,7 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-def scrape_central_charts(pages_count=6):
+def scrape_central_charts(pages_count=7):
     strt_time = time.time()
 
     url_start = 'https://www.centralcharts.com/en/price-list-ranking/'
@@ -47,11 +47,17 @@ def get_data():
     # get the data from the website
     data = scrape_central_charts()
     df = pd.DataFrame(data, columns=['Name', 'Price', 'Change', 'Low', 'High', 'Open', 'Volume'])
-    
     # Convert 'Price' column to numeric
     df['Price'] = pd.to_numeric(df['Price'], errors='coerce')
     
     return df
+
+# Create a function to generate the pie chart
+def create_pie_chart(df):
+    total_volume = df['Volume'].sum()
+    volume_pie_chart = px.pie(df, values='Volume', names='Name', title=f'Total Volume Occupations (Total Volume: {total_volume})')
+    return volume_pie_chart
+
 # Call the Streamlit app logic
 def start_app():
     # Retrieve the data using st.cache
@@ -83,6 +89,7 @@ def start_app():
     # Create a bar chart for the top 10 priced cryptocurrencies
     top_10_chart = px.bar(df.nlargest(10, 'Price'), x='Name', y='Price', title='Top 10 Priced Cryptocurrencies')
     st.plotly_chart(top_10_chart)
+
 
 if __name__ == '__main__':
     # Call the Streamlit app logic
